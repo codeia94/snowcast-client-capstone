@@ -1,0 +1,19 @@
+
+
+.header {
+	&-content {
+		height: 60px;
+		margin: 0;
+		background-color: #2b3d51;
+		padding: 8px 16px;
+		display: flex;
+		align-items: center;
+
+		&__title {
+			margin: 0;
+			color: rgb(219, 243, 238);
+			text-shadow: 5px 4px 3px black;
+		}
+	}
+}
+
