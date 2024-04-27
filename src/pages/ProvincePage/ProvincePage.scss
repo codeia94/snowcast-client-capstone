@@ -24,17 +24,17 @@
 	}
 
 	&-card {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: center;
-		width: 30%;
-		min-height: 15rem;
-		margin: 1rem;
-		padding: 1rem;
-		border-radius: 20px;
-		background-color: rgb(198, 236, 223);
-		box-shadow: 0 0 10px rgba(black, 0.1);
+		&__link {
+			display: flex;
+			flex-direction: column;
+			width: 30%;
+			min-height: 15rem;
+			margin: 1rem;
+			padding: 1rem;
+			border-radius: 20px;
+			background-color: rgb(198, 236, 223);
+			box-shadow: 0 0 10px rgba(black, 0.1);
+		}
 
 		&__details {
 			padding-top: 1rem;

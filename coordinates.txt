@@ -1,0 +1,8 @@
+Whistler = lat 50.116322, and the longitude is -122.957359
+Cypress = 49.325498698 -122.803663452
+Grouse = 49.38499846 -123.07249971
+Big White = 49.721944, -118.928889
+Sun Peaks = 50.893889, -119.893056
+
+Lake Louise Ski Resort = 51.441944, -116.160556
+Banff Sunshine = 51.078611, -115.782222
