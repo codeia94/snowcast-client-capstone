@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './MountainList.scss';
 
 
@@ -19,13 +20,16 @@ function MountainList() {
 	},[province]);
 
 	return (
-		<div className='mountain'>
-			<div className='mountain-container'>
+		<div className='mountains'>
+			<div className='mountains-container'>
 				{mountains.map((mountain) => (
-					<div className='mountain-card' key={mountain.id}>
-						<h3 className='mountain-card__name'>{mountain.name}</h3>
-						{/* <p className='mountain-card__details'>{mountain.name} is located in {mountain.province}.</p> */}
+					<Link className='mountains-card__link' key={mountain.id}>
+					
+						<div className='mountains-card'>
+						<h3 className='mountains-card__name'>{mountain.name}</h3>
+						
 					</div>
+					</Link>
 				))}
 			</div>
 		</div>

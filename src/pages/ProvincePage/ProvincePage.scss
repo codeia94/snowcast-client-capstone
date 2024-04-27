@@ -1,8 +1,8 @@
-@use '../../styles/global' as *;
 @use '../../styles/partials/fontcolor' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
 
 .province {
 	box-sizing: border-box;
@@ -24,16 +24,10 @@
 	}
 
 	&-card {
+		display: flex;
+		flex-direction: column;
 		&__link {
-			display: flex;
-			flex-direction: column;
-			width: 30%;
-			min-height: 15rem;
-			margin: 1rem;
-			padding: 1rem;
-			border-radius: 20px;
-			background-color: rgb(198, 236, 223);
-			box-shadow: 0 0 10px rgba(black, 0.1);
+			@include m-card;
 		}
 
 		&__details {

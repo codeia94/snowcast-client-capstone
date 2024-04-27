@@ -13,7 +13,7 @@ function ProvincePage() {
 		const fetchProvinces = async () => {
 			const response = await axios.get('http://localhost:8080/api/province');
 			setProvinces(response.data);
-			console.log(response.data);
+			// console.log(response.data);
 		};
 	fetchProvinces();	
 	}, []);
@@ -26,7 +26,7 @@ function ProvincePage() {
 				<Link to={`/province/${province.province}`} className='province-card__link'key={province.province}>
 					<div className='province-card' key={province.province}>
 						<h3 className='province-card__name'>{province.province}</h3>
-						<p className='province-card__details'>{province.province} is home to some of the best skiing in the world.</p>
+						{/* <p className='province-card__details'>{province.province} is home to some of the best skiing in the world.</p> */}
 					</div>
 				</Link>
 			))}

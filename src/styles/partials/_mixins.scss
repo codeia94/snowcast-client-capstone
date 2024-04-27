@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+
+@mixin tablet {
+	@media (min-width: $tablet-width) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $desktop-width) {
+		@content;
+	}
+}
+
+@mixin m-card {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	min-height: 15rem;
+	margin: 1rem;
+	padding: 1rem;
+	border-radius: 20px;
+	background-color: rgb(198, 236, 223);
+	box-shadow: 0 0 10px rgba(black, 0.1);
+	align-items: center;
+	justify-content: center;
+}
