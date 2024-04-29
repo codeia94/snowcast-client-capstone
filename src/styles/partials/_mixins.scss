@@ -16,13 +16,22 @@
 @mixin m-card {
 	display: flex;
 	flex-direction: column;
-	width: 30%;
-	min-height: 15rem;
-	margin: 1rem;
+	// width: 75%;
+	width: 80vw;
+	min-height: 25rem;
+	margin: 2rem;
 	padding: 1rem;
-	border-radius: 20px;
+	border-radius: 50px;
 	background-color: rgb(198, 236, 223);
 	box-shadow: 0 0 10px rgba(black, 0.1);
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin t-card {
+	min-width: 25rem;
+	min-height: 25rem;
+	width: unset;
+
+	border-radius: 50%;
 }

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ProvincePage from './pages/ProvincePage/ProvincePage';
 import MountainsPage from './pages/MountainsPage/MountainsPage';
+import MountainDetailsPage from './pages/MountainDetailsPage/MountainDetailsPage';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
 
 				{/* List of ski mouintains within a chosen province */}
 				<Route path="/province/:province" element={<MountainsPage />} />
+
+				{/* Details of chosen mountain */}
+				<Route path="/province/:province/:mountain" element={<MountainDetailsPage />} />
 
 			</Routes>
 			<Footer />

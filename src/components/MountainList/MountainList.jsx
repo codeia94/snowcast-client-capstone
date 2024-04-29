@@ -8,6 +8,7 @@ import './MountainList.scss';
 function MountainList() {
 
 	const [ mountains, setMountains ] = useState([]);
+	// const [ image, setImage ] = useState([]);
 	const { province } = useParams();
 
 	useEffect(() => {
@@ -19,16 +20,25 @@ function MountainList() {
 		fetchMountains();
 	},[province]);
 
+	// useEffect(() => {
+	// 	const fetchImage = async () => {
+	// 		const response = await axios.get(`http://localhost:8080/api/province/${image}`);
+	// 		setImage(response.data.img);
+	// 	};
+		
+	// }, []);
+
 	return (
 		<div className='mountains'>
 			<div className='mountains-container'>
 				{mountains.map((mountain) => (
-					<Link className='mountains-card__link' key={mountain.id}>
-					
+					<Link
+						to={`/province/${province}/${mountain.name}`}
+						className='mountains-card__link' 
+						key={mountain.id}>
 						<div className='mountains-card'>
 						<h3 className='mountains-card__name'>{mountain.name}</h3>
-						
-					</div>
+						</div>
 					</Link>
 				))}
 			</div>
