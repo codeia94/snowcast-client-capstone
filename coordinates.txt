@@ -6,3 +6,6 @@ Sun Peaks = 50.893889, -119.893056
 
 Lake Louise Ski Resort = 51.441944, -116.160556
 Banff Sunshine = 51.078611, -115.782222
+
+
+1day in epoch is 86400seconds

@@ -19,7 +19,7 @@ function App() {
 				<Route path="/province/:province" element={<MountainsPage />} />
 
 				{/* Details of chosen mountain */}
-				<Route path="/province/:province/:mountain" element={<MountainDetailsPage />} />
+				<Route path="/province/:province/:id" element={<MountainDetailsPage />} />
 
 			</Routes>
 			<Footer />

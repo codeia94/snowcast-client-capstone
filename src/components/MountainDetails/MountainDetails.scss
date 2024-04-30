@@ -1,0 +1,15 @@
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.mountainDetails {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+
+	&-container {
+		// padding: 1rem;
+	}
+}

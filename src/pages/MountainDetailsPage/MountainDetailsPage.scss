@@ -1,0 +1,17 @@
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
+
+
+.mountainBanner {
+	box-sizing: border-box;
+	width: 100%;
+	&-image {
+		box-sizing: border-box;
+		width: 100vw;
+		height: 30vh;
+		object-fit: cover;
+	}
+}
