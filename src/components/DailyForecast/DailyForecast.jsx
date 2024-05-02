@@ -43,11 +43,14 @@ function DailyForecast () {
 					<div key={index} className='dailyForecast-info'>
 						<h4 className='dailyForecast-info__date'>{setDay}</h4>
 						<p className='dailyForecast-info__summary'>{summary}</p>
-						{/* <div className='dailyForecast-info__details'> */}
-							<img src={iconUrl} alt={description} className='dailyForecast-info__icon'/>
-							<div className='dailyForecast-info__temp'>
-								<p>{minTemp} °C / {maxTemp} °C</p>
-							</div>
+						<div className='dailyForecast-info__description'>
+							<img src={iconUrl} alt={description} className='dailyForecast-info__description-icon'/>
+							<p>{description}</p>
+							{/* TODO description not shown in mobile */}
+						</div>
+						<div className='dailyForecast-info__temp'>
+							<p>{minTemp} °C / {maxTemp} °C</p>
+						</div>
 					
 						{/* </div> */}
 					</div>

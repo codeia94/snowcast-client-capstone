@@ -14,16 +14,18 @@
 
 	&-card {	
 		&__link {
+			background-size: cover;
+			background-position: center;
 			@include m-card;
 		
 
-			@include tablet {
-				@include t-card;
-			}
+			// @include tablet {
+			// 	@include t-card;
+			// }
 
-			@include desktop {
+			// @include desktop {
 				
-			}
+			// }
 		}
 	}
 }
