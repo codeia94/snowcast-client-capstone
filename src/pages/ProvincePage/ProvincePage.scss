@@ -28,6 +28,8 @@
 		flex-direction: column;
 		&__link {
 			@include m-card;
+			background-size: cover;
+			background-position: center;
 		}
 
 		&__details {

@@ -9,7 +9,7 @@ function MountainList() {
 
 	const [ mountains, setMountains ] = useState([]);
 	// const [ image, setImage ] = useState([]);
-	const { province, id } = useParams();
+	const { province } = useParams();
 
 	useEffect(() => {
 		const fetchMountains = async () => {
@@ -24,16 +24,21 @@ function MountainList() {
 	return (
 		<div className='mountains'>
 			<div className='mountains-container'>
-				{mountains.map((mountain) => (
-					<Link
-						to={`/province/${province}/${mountain.id}`}
-						className='mountains-card__link' 
-						key={mountain.id}>
-						<div className='mountains-card'>
-						<h3 className='mountains-card__name'>{mountain.name}</h3>
-						</div>
-					</Link>
-				))}
+				{mountains.map((mountain) => {
+					const mountainsImageUrl = `http://localhost:8080/images/${mountain.img}`;
+					console.log(mountainsImageUrl);
+					return(
+						<Link
+							to={`/province/${province}/${mountain.id}`}
+							className='mountains-card__link' 
+							key={mountain.id}
+							style={{ backgroundImage: `url(${mountainsImageUrl})`}}>
+							<div className='mountains-card'>
+							<h3 className='mountains-card__name'>{mountain.name}</h3>
+							</div>
+						</Link>
+					);
+				})}
 			</div>
 		</div>
 	);

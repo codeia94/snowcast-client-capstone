@@ -13,7 +13,7 @@ function ProvincePage() {
 		const fetchProvinces = async () => {
 			const response = await axios.get('http://localhost:8080/api/province');
 			setProvinces(response.data);
-			// console.log(response.data);
+			console.log(response.data);
 		};
 	fetchProvinces();	
 	}, []);
@@ -22,14 +22,22 @@ function ProvincePage() {
 		<div className='province'>
 			<h2 className='province-title'>Provinces</h2>
 			<div className='province-container'>
-			{provinces.map((province) => (
-				<Link to={`/province/${province.province}`} className='province-card__link'key={province.province}>
-					<div className='province-card' key={province.province}>
-						<h3 className='province-card__name'>{province.province}</h3>
-						{/* <p className='province-card__details'>{province.province} is home to some of the best skiing in the world.</p> */}
-					</div>
-				</Link>
-			))}
+			{provinces.map((province) => {
+				const provinceImageUrl = `http://localhost:8080/images/${province.province}.jpeg`
+
+				return (
+					<Link 
+						to={`/province/${province.province}`} 
+						className='province-card__link'
+						key={province.province}
+						style={{ backgroundImage: `url(${provinceImageUrl})`}} >
+						<div className='province-card' key={province.province}>
+							<h3 className='province-card__name'>{province.province}</h3>
+						</div>
+					</Link>
+				);
+			})}
+			
 			</div>
 		</div>
 	);
