@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 import './MountainDetails.scss';
 import ForecastNav from '../ForecastNav/ForecastNav';
-import DayForecast from '../DayForecast/DayForecast';
+// import DayForecast from '../DayForecast/DayForecast';
+import DailyForecast from '../DailyForecast/DailyForecast';
 
 // This shows the nav bar and details of shown mountain
 function MountainDetails() {
@@ -11,8 +12,9 @@ function MountainDetails() {
 		<div className="mountainDetails">
 			<div className='mountainDetails-container'>
 				<ForecastNav />
+				<DailyForecast id={id}/>
 				{/* <h4 className='mountainDetails-title'>MountainDetails</h4> */}
-				<DayForecast id={id} province={province}/>
+				{/* <DayForecast id={id} province={province}/> */}
 			</div>
 			
 		</div>
