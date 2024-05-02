@@ -4,6 +4,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/global.scss' as *;
 
+
 .province {
 	box-sizing: border-box;
 	display: flex;
@@ -16,24 +17,38 @@
 
 	&-container {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
+		flex-direction: column;
 		width: 100%;
+		height: 100vh;
+		align-items: center;
 		justify-content: center;
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			height: 100vh;
+			@include t-card;
+			@include scroll-snap;
+		}
 	}
 
+	
 	&-card {
 		display: flex;
 		flex-direction: column;
+
 		&__link {
-			@include m-card;
+			@include card;
 			background-size: cover;
 			background-position: center;
-		}
-
-		&__details {
-			padding-top: 1rem;
+			text-decoration: none;
+			justify-content: center;
+			// background: linear-gradient(rgba(0, 0, 0, 0.608), rgba(0, 0, 0, 0.615));
+			
+			@include tablet {
+				scroll-snap-align: start;
+		
+			}
 		}
 	}
 }

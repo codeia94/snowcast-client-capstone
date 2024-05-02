@@ -13,25 +13,31 @@
 	}
 }
 
-@mixin m-card {
+@mixin card {
 	display: flex;
 	flex-direction: column;
-	// width: 75%;
-	width: 80vw;
-	min-height: 25rem;
-	margin: 2rem;
+	width: 100%;
+	height: 100%;
 	padding: 1rem;
-	border-radius: 50px;
 	background-color: rgb(198, 236, 223);
 	box-shadow: 0 0 10px rgba(black, 0.1);
 	align-items: center;
-	justify-content: center;
+	// justify-content: center;
+	// overflow-y: scroll;
+	// scroll-snap-align: start;
+	@include tablet {
+		width: 100vw;
+		height: 100vh;
+	}
 }
 
 @mixin t-card {
-	min-width: 25rem;
-	min-height: 25rem;
-	width: unset;
+	width: 100vw;
+	height: 100vh;
+	// scroll-snap-align: start;
+}
 
-	border-radius: 50%;
+@mixin scroll-snap {
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
 }

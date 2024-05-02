@@ -13,14 +13,14 @@ function ProvincePage() {
 		const fetchProvinces = async () => {
 			const response = await axios.get('http://localhost:8080/api/province');
 			setProvinces(response.data);
-			console.log(response.data);
+			// console.log(response.data);
 		};
 	fetchProvinces();	
 	}, []);
 
 	return (
 		<div className='province'>
-			<h2 className='province-title'>Provinces</h2>
+			{/* <h2 className='province-title'>Provinces</h2> */}
 			<div className='province-container'>
 			{provinces.map((province) => {
 				const provinceImageUrl = `http://localhost:8080/images/${province.province}.jpeg`

@@ -9,19 +9,31 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: center
+		justify-content: center;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			height: 100vh;
+			@include t-card;
+			@include scroll-snap;
+		}
 	}
 
 	&-card {	
 		&__link {
 			background-size: cover;
 			background-position: center;
-			@include m-card;
+			text-decoration: none;
+			@include card;
 		
 
-			// @include tablet {
-			// 	@include t-card;
-			// }
+			@include tablet {
+				@include t-card;
+				scroll-snap-align: center;
+				justify-content: center;
+			}
 
 			// @include desktop {
 				
