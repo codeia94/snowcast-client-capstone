@@ -13,4 +13,26 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+	&-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		&:nth-child(even) {
+			background-color:rgba(164, 226, 227, 0.246);
+		}
+		&:nth-child(odd) {
+			background-color: white;
+		}
+	}
+
+	&-item {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2rem;
+		
+	}
 }

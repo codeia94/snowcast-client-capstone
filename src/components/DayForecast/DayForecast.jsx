@@ -11,15 +11,15 @@ import './DayForecast.scss';
 function DayForecast() {
 
 	const { id } = useParams();
-	const [ dayForecast, setDayForecast ] = useState(null);
+	// const [ dayForecast, setDayForecast ] = useState(null);
 	const [ hourlyForecast, setHourlyForecast ] = useState(null);
 
 	useEffect(() => {
 		const fetchDayForecast = async () => {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/mountain/${id}`);
-				console.log(response.data);
-				setDayForecast(response.data.daily[0]);
+				// console.log(response.data);
+				// setDayForecast(response.data.daily[0]);
 				setHourlyForecast(response.data.hourly);
 				console.log(response.data.hourly);
 			} catch (error) {
@@ -28,37 +28,42 @@ function DayForecast() {
 		};
 		fetchDayForecast();
 	}, [id]);
-
-
-
-	const { dt, summary, clouds, snow, temp, wind__speed } = dayForecast || {};
-	const date = new Date(dt * 1000).toLocaleDateString();
-	const { hdt, hclouds, htemp, hwind__speed, hsnow } = hourlyForecast || {};
-	const time = new Date(hdt * 1000).toLocaleTimeString();
-
+	
 	return (
 		<div className='dayForecast'>
 			<div className='dayForecast-info'>
-				<h4 className='dayForecast-info__date'>{date}</h4>
-				<p className='dayForecast-info__summary'>{summary}</p>
+				<h4 className='dayForecast-info__date'></h4>
+				<p className='dayForecast-info__summary'>test</p>
 			</div>
 			
-			<div className='dayForecast-container'>
-				{hourlyForecast.slice(0, 24).map((hourlyForecast) => (
-
-				<div className='dayForecast-item hour-container'>
-					<p></p>
-				</div>
-				<div className='dayForecast-item snow-container'>
-					<p>Snowmm</p>
-				</div>
-				<div className='dayForecast-item temp-container'>
-
-				</div>
-				<div className='dayForecast-item condition-container'></div>
-				
-				))}
-			</div>
+			{hourlyForecast && hourlyForecast.slice(0, 24).map((forecast, index) => {
+				const time = new Date(forecast.dt * 1000).toLocaleTimeString([],{ hour: 'numeric', minute: undefined, second: undefined });
+				const { feels_like, temp, wind_speed, snow } = forecast || {};
+				const snowfall = snow && snow['1h'] || '0';
+				const wind = (wind_speed*3.6).toFixed(2);
+				return (
+					<div key={index} className='dayForecast-container'>
+						{/* <div > */}
+							<div className='dayForecast-item hour-container'>
+								<p>{time}</p>
+							</div>
+							<div className='dayForecast-item snow-container'>
+								<p>{snowfall}mm</p>
+							</div>
+							<div className='dayForecast-item temp-container'>
+								<p>{temp}°C</p>
+							</div>
+							<div className='dayForecast-item tempFeel-container'>
+								<p>{feels_like}°C</p>
+							</div>
+							<div className='dayForecast-item wind-container'>
+								<p>{wind}km/h</p>
+							</div>
+							
+						{/* </div> */}
+					</div>
+				);
+			})}
 		</div>
 	);
 }
