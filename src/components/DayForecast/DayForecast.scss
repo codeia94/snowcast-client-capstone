@@ -18,9 +18,10 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
+		padding: 1rem;
 
 		&:nth-child(even) {
-			background-color:rgba(164, 226, 227, 0.246);
+			background-color: $lightblue;
 		}
 		&:nth-child(odd) {
 			background-color: white;

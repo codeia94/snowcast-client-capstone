@@ -1,10 +1,14 @@
-
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
 
 .header {
 	&-content {
 		height: 60px;
 		margin: 0;
-		background-color: #2b3d51;
+		background-color: $darkblue;
 		padding: 8px 16px;
 		display: flex;
 		align-items: center;

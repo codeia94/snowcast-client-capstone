@@ -1,0 +1,24 @@
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
+
+
+.dailyForecast {
+	box-sizing: border-box;
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+
+		&:nth-child(odd) {
+			background-color:$lightblue;
+		}
+		&:nth-child(even) {
+			background-color: white;
+		}
+	}
+}
