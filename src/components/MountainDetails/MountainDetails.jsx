@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import './MountainDetails.scss';
-// import ForecastNav from '../ForecastNav/ForecastNav';
 import DayForecast from '../DayForecast/DayForecast';
 import DailyForecast from '../DailyForecast/DailyForecast';
 
@@ -13,7 +12,6 @@ function MountainDetails() {
 	return (
 		<div className="mountainDetails">
 			<div className='mountainDetails-container'>
-				{/* <ForecastNav /> */}
 				<div className='forecastNav'>
 					<div className='forecastNav-container'>
 						<button className='forecastNav-container__item currentDay'  onClick={() => setShowDaily(false)} >

@@ -1,21 +1,23 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './TrailMap.scss';
 
 
 function TrailMap () {
 
+	const { province } = useParams();
 	const [ trailMaps, setTrailMaps ] = useState([]);
 	const [ selectedMapImage, setSelectedMapImage ] = useState('');
 
 	useEffect(() => {
 		const fetchTrailMaps = async () => {
-			const response = await axios.get('http://localhost:8080/api/trailmap');
+			const response = await axios.get(`http://localhost:8080/api/trailmap/province/${province}`);
 			setTrailMaps(response.data);
-			console.log(response.data);
+			// console.log(response.data);
 		};
 		fetchTrailMaps();
-	},[]);
+	},[province]);
 
 	return (
 		<div className='trailMap'>
@@ -25,7 +27,6 @@ function TrailMap () {
 				</div>
 				{trailMaps.map((trailMap) => {
 					const trailMapImageUrl = `http://localhost:8080/trailmaps/${trailMap.trailmap}`;
-					// console.log(trailMapImageUrl);
 					return(
 						<div className='trailMap-card' key={trailMap.id}>
 							{/* <p className='trailMao-card__mountain'>{trailMap}</p> */}

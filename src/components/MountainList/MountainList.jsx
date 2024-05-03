@@ -8,15 +8,14 @@ import './MountainList.scss';
 function MountainList() {
 
 	const [ mountains, setMountains ] = useState([]);
-	// const [ image, setImage ] = useState([]);
 	const { province } = useParams();
 
 	useEffect(() => {
 		const fetchMountains = async () => {
 			const response = await axios.get(`http://localhost:8080/api/province/${province}`);
-			console.log(response);
+			// console.log(response);
 			setMountains(response.data);
-			console.log(response.data);
+			// console.log(response.data);
 		};
 		fetchMountains();
 	},[province]);

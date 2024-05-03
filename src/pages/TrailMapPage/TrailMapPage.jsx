@@ -8,18 +8,6 @@ import MountainDetailsNav from '../../components/MountainDetailsNav/MontainDetai
 
 function TrailMapPage() {
 
-	// const [ trailMaps, setTrailMaps ] = useState([]);
-
-	// useEffect(() => {
-	// 	const fetchTrailMaps = async () => {
-	// 		const response = await axios.get('http://localhost:8080/api/trailmap');
-	// 		setTrailMaps(response.data);
-	// 		// console.log(response.data);
-	// 	};
-	// 	fetchTrailMaps();
-	// },[]);
-
-
 	return (
 		<div>
 			<div className='trailMapPage'>
