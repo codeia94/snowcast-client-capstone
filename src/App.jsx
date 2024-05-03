@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import ProvincePage from './pages/ProvincePage/ProvincePage';
 import MountainsPage from './pages/MountainsPage/MountainsPage';
 import MountainDetailsPage from './pages/MountainDetailsPage/MountainDetailsPage';
+import TrailMapPage from './pages/TrailMapPage/TrailMapPage';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
 
 				{/* Details of chosen mountain */}
 				<Route path="/province/:province/:id" element={<MountainDetailsPage />} />
+
+				{/* List of trail maps */}
+				<Route path="/province/:province/trailmap" element={<TrailMapPage />} />
+
+				{/* List of cams */}
 
 			</Routes>
 			<Footer />
