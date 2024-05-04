@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import './MountainListLabel.scss';
 
@@ -31,7 +32,7 @@ function MountainListLabel() {
 		<div className='mountainListLabel'>
 			{showMountainList.map((mountain) => (
 				<div key={mountain.id} className='mountainListLabel-list'>
-					<p className='mountainListLabel-list__item'>{mountain.name}</p>
+					<NavLink to={`/province/${province}/${mountain.id}`} className='mountainListLabel-list__item'>{mountain.name}</NavLink>
 				</div>
 			))}
 		</div>
