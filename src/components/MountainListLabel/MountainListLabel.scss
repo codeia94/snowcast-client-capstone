@@ -1,0 +1,18 @@
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
+
+.mountainListLabel {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	&-list {
+		gap: 1rem;
+		&__item {
+			font-size: 12px;
+		}
+	}
+}

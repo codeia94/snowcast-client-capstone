@@ -3,16 +3,18 @@ import { useState } from 'react';
 import './MountainDetails.scss';
 import DayForecast from '../DayForecast/DayForecast';
 import DailyForecast from '../DailyForecast/DailyForecast';
+import MountainListLabel from '../MountainListLabel/MountainListLabel';
 
 // This shows the nav bar and details of shown mountain
 function MountainDetails() {
-	const { id } = useParams();
+	const { id, province } = useParams();
 	const [ showDaily, setShowDaily ] = useState(false);
 
 	return (
 		<div className="mountainDetails">
 			<div className='mountainDetails-container'>
 				<div className='forecastNav'>
+					<MountainListLabel province={province}/>
 					<div className='forecastNav-container'>
 						<button className='forecastNav-container__item currentDay'  onClick={() => setShowDaily(false)} >
 							<h4 className='forecastNav-container__item-title'>TODAY</h4>
