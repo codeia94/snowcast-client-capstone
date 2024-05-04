@@ -32,7 +32,13 @@ function MountainListLabel() {
 		<div className='mountainListLabel'>
 			{showMountainList.map((mountain) => (
 				<div key={mountain.id} className='mountainListLabel-list'>
-					<NavLink to={`/province/${province}/${mountain.id}`} className='mountainListLabel-list__item'>{mountain.name}</NavLink>
+					<NavLink 
+						to={`/province/${province}/${mountain.id}`} 
+						activeClassName='active-link' 
+						className='mountainListLabel-list__item'
+					>
+						{mountain.name}
+					</NavLink>
 				</div>
 			))}
 		</div>
