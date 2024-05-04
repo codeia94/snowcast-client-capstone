@@ -9,3 +9,17 @@ Banff Sunshine = 51.078611, -115.782222
 
 
 1day in epoch is 86400seconds
+
+
+Whistler =//player.brownrice.com/embed/whistlersnowstack
+Cypress = https://www.youtube.com/embed/GTQQdQ8VVKI?si=QtT6luyZz5vWujx3
+Grouse = 
+Big	White
+Sun Peaks
+Mt seymour = https://www.youtube.com/embed/vLawo-FrBKk?si=kW7BS50a8hPOjNgJ
+
+Lake Louise
+Banff Sunshine = https://www.youtube.com/embed/mStghtD0YNk?si=WPR2DszGjp7TifG6
+
+
+
