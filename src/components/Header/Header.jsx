@@ -1,3 +1,5 @@
+import Flag from 'react-world-flags';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 
@@ -5,16 +7,17 @@ function Header () {
 	return (
 		<header>
 			<div className='header-content'>
-				<h1 className='header-content__title'>SNOWCAST</h1>
+				<Link to={`/province`} className='header-content__title-link'>
+					<h1 className='header-content__title'>SNOWCAST</h1>
+				</Link>
 				<div className='header-content__container'>
 					<div className='header-content__prov'>
-						<h2>AB</h2>
+						<Link to={`/province/AB`} className='header-content__prov-item'>AB</Link>
 						<hr></hr>
-						<h2>BC</h2>
+						<Link to={`/province/BC`} className='header-content__prov-item'>BC</Link>
 					</div>
 					<div className='header-content__country'>
-						<h2>CA</h2>
-					</div>
+						<Flag code="CA" height="16" /></div>
 				</div>
 			</div>
 		</header>

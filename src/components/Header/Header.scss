@@ -20,6 +20,10 @@
 			margin: 0;
 			color: rgb(219, 243, 238);
 			text-shadow: 5px 4px 3px black;
+
+			&-link {
+				text-decoration: none;
+			}
 		}
 
 		&__prov {
@@ -28,7 +32,43 @@
 			color: white;
 			gap: 1rem;
 			align-items: center;
+
+			&-item {
+				text-decoration: none;
+				color: white;
+				font-weight: 600;
+				position: relative;
+				overflow: hidden;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 1.5px;
+					top: 50%;
+					left: 0;
+					background-color: white;
+					transition: width 0.3s ease-in-out;
+				}
+
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
 		}	
+
+		&__container {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			align-items: center;
+		}
+
+		&__country {
+			display: flex;
+		}
 	}
 }
 

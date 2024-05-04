@@ -7,6 +7,7 @@ import MountainsPage from './pages/MountainsPage/MountainsPage';
 import MountainDetailsPage from './pages/MountainDetailsPage/MountainDetailsPage';
 import TrailMapPage from './pages/TrailMapPage/TrailMapPage';
 import LiveCamPage from './pages/LiveCamPage/LiveCamPage';
+import ForecastPage from './pages/ForecastPage/ForecastPage';
 
 function App() {
   return (
@@ -23,10 +24,13 @@ function App() {
 				{/* Details of chosen mountain */}
 				<Route path="/province/:province/:id" element={<MountainDetailsPage />} />
 
-				{/* List of trail maps */}
+				{/* List of summarize forecast by province */}
+				<Route path="/province/:province/forecast" element={<ForecastPage />} />
+
+				{/* List of trail maps by province */}
 				<Route path="/province/:province/trailmap" element={<TrailMapPage />} />
 
-				{/* List of live feed cams */}
+				{/* List of live feed cams by province*/}
 				<Route path="/province/:province/cams" element={<LiveCamPage />} />
 
 
