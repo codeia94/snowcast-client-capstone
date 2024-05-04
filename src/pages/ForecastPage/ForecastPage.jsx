@@ -1,5 +1,5 @@
 import MountainDetailsNav from '../../components/MountainDetailsNav/MontainDetailsNav';
-
+import MountainsForecast from '../../components/MountainsForecast/MountainsForecast';
 import './ForecastPage.scss';
 
 function ForecastPage() {
@@ -12,6 +12,7 @@ function ForecastPage() {
 				/>					
 			</div>
 			<MountainDetailsNav />
+			<MountainsForecast />
 		</div>
 	);
 }
