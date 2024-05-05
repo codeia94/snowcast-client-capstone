@@ -48,7 +48,7 @@ function MountainsForecast() {
 
 				return (
 				<div key={mountain.id} className='mountainsForecast-list'>
-					<Link to={`/province/${province}/${mountain.mountain_id}`} className='mountainsForecast-list__item col-lg'>{mountain.name}</Link>
+					<Link to={`/province/${province}/${mountain.mountain_id}`} className='mountainsForecast-list__name col-lg'>{mountain.name}</Link>
 					<p className='mountainsForecast-list__item col-sm'>{tempFeel}</p>
 					<p className='mountainsForecast-list__item col-sm'>{temp}</p>
 					<p className='mountainsForecast-list__item col-sm'>{wind}</p>

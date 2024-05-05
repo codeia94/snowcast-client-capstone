@@ -41,28 +41,28 @@
 			background-color: white;
 		}
 
-		&__item {
+		&__name {
 			text-decoration: none;
 			color: $darkblue;
 			position: relative;
 			overflow: hidden;
 
-			&::before {
-				content: "";
-				position: absolute;
-				width: 0;
-				height: 1.5px;
-				top: 50%;
-				left: 0;
-				background-color: $darkblue;
-				transition: width 0.3s ease-in-out;
-			}
+			// &::before {
+			// 	content: "";
+			// 	position: absolute;
+			// 	width: 0;
+			// 	height: 1.5px;
+			// 	top: 50%;
+			// 	left: 0;
+			// 	background-color: $darkblue;
+			// 	transition: width 0.3s ease-in-out;
+			// }
 
-			&:hover {
-				&::before {
-					width: 60%;
-				}
-			}
+			// &:hover {
+			// 	&::before {
+			// 		width: 60%;
+			// 	}
+			// }
 		}
 	}
 }
