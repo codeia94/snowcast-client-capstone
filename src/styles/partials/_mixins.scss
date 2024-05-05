@@ -22,9 +22,7 @@
 	background-color: rgb(198, 236, 223);
 	box-shadow: 0 0 10px rgba(black, 0.1);
 	align-items: center;
-	// justify-content: center;
-	// overflow-y: scroll;
-	// scroll-snap-align: start;
+
 	@include tablet {
 		width: 100vw;
 		height: 100vh;
@@ -40,4 +38,19 @@
 @mixin scroll-snap {
 	overflow-y: auto;
 	scroll-snap-type: y mandatory;
+}
+
+@mixin unit-size {
+	font-size: 10px;
+}
+
+@mixin label-size {
+	font-size: 1rem;
+}
+
+@mixin forecast-label{
+	font-size: 12px;
+	// @include tablet {
+	// 	font-size: 16px;
+	// }
 }

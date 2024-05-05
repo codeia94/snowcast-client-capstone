@@ -10,9 +10,9 @@ function MountainDetailsNav () {
 	return (
 		<div className='componentNav'>
 			<div className='componentNav-list'>
-				<NavLink to={`/province/${province}/forecast`} className='componentNav-label'>Forecast</NavLink>
-				<NavLink to={`/province/${province}/trailmap`} className='componentNav-label'>Trail Map</NavLink>
-				<NavLink to={`/province/${province}/cams`} className='componentNav-label'>Cams</NavLink>
+				<NavLink to={`/province/${province}/forecast`} activeClassName='active_link' className='componentNav-label'>Forecast</NavLink>
+				<NavLink to={`/province/${province}/trailmap`} activeClassName='active_link' className='componentNav-label'>Trail Map</NavLink>
+				<NavLink to={`/province/${province}/cams`} activeClassName='active_link' className='componentNav-label'>Cams</NavLink>
 			</div>
 		</div>
 	)

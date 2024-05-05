@@ -43,4 +43,8 @@
 	}
 }
 
-
+.active-link {
+	::after {
+		font-weight: 700;
+	}
+}

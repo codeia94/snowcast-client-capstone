@@ -1,0 +1,19 @@
+@use '../../styles/partials/fontcolor' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/global.scss' as *;
+
+
+.forecastPage-component {
+	display: flex;
+	justify-content: center;
+	// max-width: 800px;
+
+	@include tablet {
+		// border-radius: 50px;
+		// border: 1px solid black;
+		// margin: 1rem 0rem;
+		// max-width: 850px;
+	}
+}

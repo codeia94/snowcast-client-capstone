@@ -10,11 +10,29 @@
 	background-color: $darkblue;
 	height: 2rem;
 	align-content: center;
+
+	@include tablet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
 	
 	&-list {
 		display: flex;
 		color: white;
 		justify-content: space-evenly;
-		font-weight: 700;
+		font-weight: 600;
+
+		@include tablet {
+			display: flex;
+			width: 850px;
+			justify-content: space-around;
+		}
+	}
+
+	&-label {
+		text-decoration: none;
+		color: white;
 	}
 }

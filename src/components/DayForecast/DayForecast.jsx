@@ -44,11 +44,11 @@ function DayForecast() {
 							<div className='dayForecast-item snow-container'>
 								<p>{snowfall} mm</p>
 							</div>
-							<div className='dayForecast-item temp-container'>
-								<p>{temp} °C</p>
-							</div>
 							<div className='dayForecast-item tempFeel-container'>
 								<p>{feels_like} °C</p>
+							</div>
+							<div className='dayForecast-item temp-container'>
+								<p>{temp} °C</p>
 							</div>
 							<div className='dayForecast-item wind-container'>
 								<p>{wind} km/h</p>
