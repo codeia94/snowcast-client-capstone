@@ -10,16 +10,27 @@
 	flex-direction: column;
 
 	&-container {
-		// padding: 1rem;
+	
 	}
 }
 .active {
 	// background-color: rgb(65, 130, 221);
 }
 
+.desktop-flex {
+	display: flex;
+	flex-direction: row;
+
+}
 
 .forecastNav {
 	box-sizing: border-box;
+
+	@include desktop {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&-container {
 		display: flex;
 		flex-direction: row;
@@ -29,8 +40,10 @@
 		padding: 1rem;
 		:hover {
 			cursor: pointer;
-			background-color: rgb(155, 234, 238);
+			background-color: $darkblue;
+			// background-color: rgb(155, 234, 238);
 			color: white;
+			border-radius: 0;
 			
 		}
 
@@ -47,6 +60,7 @@
 			border-radius: 20px;
 			box-shadow: 2px 3px 11px 2px rgba(0, 0, 0, 0.094);
 			padding: 10px;
+			
 			
 
 		}

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
+import MountainDescription from '../MountainDescription/MountainDescription';
 import './DayForecast.scss';
 
 
@@ -26,8 +26,27 @@ function DayForecast() {
 	
 	return (
 		<div className='dayForecast'>
+			{/* <MountainDescription /> */}
 			<div className='dayForecast-info'>
-				{/* <p className='dayForecast-info__summary'>test</p> */}
+				<div className='dayForecast-info__label'>
+					<p className='dayForecast-info__label-item'>Hour</p>
+				</div>
+				<div className='dayForecast-info__label'>
+					<p className='dayForecast-info__label-item'>Snowfall</p>
+					<p className='dayForecast-info__label-unit'>mm</p>
+				</div>
+				<div className='dayForecast-info__label'>
+					<p className='dayForecast-info__label-item'>Feels Like</p>
+					<p className='dayForecast-info__label-unit'>°C</p>
+				</div>
+				<div className='dayForecast-info__label'>
+					<p className='dayForecast-info__label-item'>Temp</p>
+					<p className='dayForecast-info__label-unit'>°C</p>
+				</div>
+				<div className='dayForecast-info__label'>
+					<p className='dayForecast-info__label-item'>Wind</p>
+					<p className='dayForecast-info__label-unit'>km/h</p>
+				</div>
 			</div>
 			
 			{hourlyForecast && hourlyForecast.slice(0, 24).map((forecast, index) => {
@@ -42,16 +61,16 @@ function DayForecast() {
 								<p>{time}</p>
 							</div>
 							<div className='dayForecast-item snow-container'>
-								<p>{snowfall} mm</p>
+								<p>{snowfall}</p>
 							</div>
 							<div className='dayForecast-item tempFeel-container'>
-								<p>{feels_like} °C</p>
+								<p>{feels_like}</p>
 							</div>
 							<div className='dayForecast-item temp-container'>
-								<p>{temp} °C</p>
+								<p>{temp}</p>
 							</div>
 							<div className='dayForecast-item wind-container'>
-								<p>{wind} km/h</p>
+								<p>{wind}</p>
 							</div>
 							
 						{/* </div> */}

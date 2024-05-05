@@ -16,7 +16,7 @@ function MountainListLabel() {
 				const response = await axios.get(`http://localhost:8080/api/province/${province}`);
 				setShowMountainList(response.data);
 				setIsLoading(false);
-				console.log(response.data);
+				// console.log(response.data);
 			} catch (error) {
 				console.error('Error fetching mountain data:', error);
 			}

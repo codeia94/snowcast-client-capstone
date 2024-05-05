@@ -19,12 +19,14 @@ function TrailMap () {
 		fetchTrailMaps();
 	},[province]);
 
+
+// <a href="/images/myimage.jpg" download>Click to download</a>
 	return (
 		<div className='trailMap'>
 			<div className='trailMap-container'>
-				<div className='trailMap-container__name'>
+				{/* <div className='trailMap-container__name'>
 					<h2>Trail Maps</h2>
-				</div>
+				</div> */}
 				{trailMaps.map((trailMap) => {
 					const trailMapImageUrl = `http://localhost:8080/trailmaps/${trailMap.trailmap}`;
 					return(
@@ -36,6 +38,7 @@ function TrailMap () {
 								className='trailMap-card__image' 
 								onClick={() => setSelectedMapImage(trailMapImageUrl)}
 							/>
+							<a href={trailMapImageUrl} download className='trailMap-download' >Click to download</a>
 						</div>
 					);
 				})}
