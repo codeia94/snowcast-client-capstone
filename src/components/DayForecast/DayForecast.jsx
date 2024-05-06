@@ -58,19 +58,19 @@ function DayForecast() {
 					<div key={index} className='dayForecast-container'>
 						{/* <div > */}
 							<div className='dayForecast-item hour-container'>
-								<p>{time}</p>
+								<p className='dayForecast-item__value'>{time}</p>
 							</div>
 							<div className='dayForecast-item snow-container'>
-								<p>{snowfall}</p>
+								<p className='dayForecast-item__value'>{snowfall}</p>
 							</div>
 							<div className='dayForecast-item tempFeel-container'>
-								<p>{feels_like}</p>
+								<p className='dayForecast-item__value'>{feels_like}</p>
 							</div>
 							<div className='dayForecast-item temp-container'>
-								<p>{temp}</p>
+								<p className='dayForecast-item__value'>{temp}</p>
 							</div>
 							<div className='dayForecast-item wind-container'>
-								<p>{wind}</p>
+								<p className='dayForecast-item__value'>{wind}</p>
 							</div>
 							
 						{/* </div> */}

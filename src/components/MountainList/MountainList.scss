@@ -22,11 +22,18 @@
 	}
 
 	&-card {	
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.416);
+		color: white;
+		border-radius: 1rem;
+
 		&__link {
 			background-size: cover;
 			background-position: center;
 			text-decoration: none;
 			@include card;
+			height: 300px;
+			justify-content: center;
 		
 
 			@include tablet {

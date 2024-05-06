@@ -29,7 +29,7 @@ function ProvincePage() {
 					<Link 
 						to={`/province/${province.province}`} 
 						className='province-card__link'
-						key={province.province}
+						key={province.province}j
 						style={{ backgroundImage: `url(${provinceImageUrl})`}} >
 						<div className='province-card' key={province.province}>
 							<h3 className='province-card__name'>{province.province}</h3>

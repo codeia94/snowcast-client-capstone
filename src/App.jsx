@@ -2,6 +2,7 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import CountryPage from './pages/CountryPage/CountryPage';
 import ProvincePage from './pages/ProvincePage/ProvincePage';
 import MountainsPage from './pages/MountainsPage/MountainsPage';
 import MountainDetailsPage from './pages/MountainDetailsPage/MountainDetailsPage';
@@ -14,6 +15,9 @@ function App() {
     <BrowserRouter>
 			<Header />
 			<Routes>
+
+				{/* Country page - homepage */}
+				<Route path="/" element={<CountryPage />} />
 
 				{/* Province Page - perhaps a list of all provinces */}
 				<Route path="/province" element={<ProvincePage />} />

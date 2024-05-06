@@ -13,9 +13,7 @@ function MountainList() {
 	useEffect(() => {
 		const fetchMountains = async () => {
 			const response = await axios.get(`http://localhost:8080/api/province/${province}`);
-			// console.log(response);
 			setMountains(response.data);
-			// console.log(response.data);
 		};
 		fetchMountains();
 	},[province]);

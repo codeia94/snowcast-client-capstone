@@ -9,7 +9,7 @@ function Header () {
 	return (
 		<header>
 			<div className='header-content'>
-				<Link to={`/province`} className='header-content__title-link'>
+				<Link to={`/`} className='header-content__title-link'>
 					<h1 className='header-content__title'>SN<Logo className='header-icon'/>WCAST
 					</h1>
 				</Link>
