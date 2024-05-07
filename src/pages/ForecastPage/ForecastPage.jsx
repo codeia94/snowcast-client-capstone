@@ -24,6 +24,3 @@ function ForecastPage() {
 }
 
 export default ForecastPage;
-
-
-//http://localhost:8080/api/mountain/province/BC
