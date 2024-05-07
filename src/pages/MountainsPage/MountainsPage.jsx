@@ -10,9 +10,7 @@ function MountainsPage() {
 	return (
 		<div className='mountain'>
 			<div className='mountain-container'>
-				{/* <h2 className='mountain-container__title'>Ski Mountains</h2> */}
 				<MountainList province={province}/>
-				
 			</div>
 		</div>
 	);

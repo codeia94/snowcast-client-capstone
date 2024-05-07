@@ -15,7 +15,6 @@ function MountainDescription() {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/mountain/mountain/${id}`);
 				setMountainDescription(response.data);
-				console.log(response.data);
 			} catch (error) {
 				console.error('Error fetching mountain description:', error);
 			}

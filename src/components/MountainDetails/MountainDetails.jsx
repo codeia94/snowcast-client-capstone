@@ -5,7 +5,7 @@ import DayForecast from '../DayForecast/DayForecast';
 import DailyForecast from '../DailyForecast/DailyForecast';
 import MountainListLabel from '../MountainListLabel/MountainListLabel';
 import MountainDescription from '../MountainDescription/MountainDescription';
-// This shows the nav bar and details of shown mountain
+
 function MountainDetails() {
 	const { id, province } = useParams();
 	const [ showDaily, setShowDaily ] = useState(false);

@@ -14,7 +14,6 @@ function LiveCamPage({ province }) {
 			</div>
 			<MountainDetailsNav />
 			<div className='liveCamPage-container'>
-				{/* <h1>Live Cam Page</h1> */}
 			</div>
 			<LiveCam province={province}/>
 		</div>

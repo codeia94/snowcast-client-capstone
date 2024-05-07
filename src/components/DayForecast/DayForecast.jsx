@@ -1,8 +1,6 @@
-// import react from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import MountainDescription from '../MountainDescription/MountainDescription';
 import './DayForecast.scss';
 
 
@@ -16,7 +14,6 @@ function DayForecast() {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/mountain/${id}`);
 				setHourlyForecast(response.data.hourly);
-				console.log(response.data.hourly);
 			} catch (error) {
 				console.error('Error fetching hourly data:', error);
 			}
@@ -26,7 +23,6 @@ function DayForecast() {
 	
 	return (
 		<div className='dayForecast'>
-			{/* <MountainDescription /> */}
 			<div className='dayForecast-info'>
 				<div className='dayForecast-info__label'>
 					<p className='dayForecast-info__label-item'>Hour</p>
@@ -52,28 +48,25 @@ function DayForecast() {
 			{hourlyForecast && hourlyForecast.slice(0, 24).map((forecast, index) => {
 				const time = new Date(forecast.dt * 1000).toLocaleTimeString([],{ hour: 'numeric', minute: undefined, second: undefined });
 				const { feels_like, temp, wind_speed, snow } = forecast;
-				const snowfall = snow && snow['1h'] || '0';
+				const snowfall = (snow && snow['1h']) || '0';
 				const wind = (wind_speed*3.6).toFixed(2);
 				return (
 					<div key={index} className='dayForecast-container'>
-						{/* <div > */}
-							<div className='dayForecast-item hour-container'>
-								<p className='dayForecast-item__value'>{time}</p>
-							</div>
-							<div className='dayForecast-item snow-container'>
-								<p className='dayForecast-item__value'>{snowfall}</p>
-							</div>
-							<div className='dayForecast-item tempFeel-container'>
-								<p className='dayForecast-item__value'>{feels_like}</p>
-							</div>
-							<div className='dayForecast-item temp-container'>
-								<p className='dayForecast-item__value'>{temp}</p>
-							</div>
-							<div className='dayForecast-item wind-container'>
-								<p className='dayForecast-item__value'>{wind}</p>
-							</div>
-							
-						{/* </div> */}
+						<div className='dayForecast-item hour-container'>
+							<p className='dayForecast-item__value'>{time}</p>
+						</div>
+						<div className='dayForecast-item snow-container'>
+							<p className='dayForecast-item__value'>{snowfall}</p>
+						</div>
+						<div className='dayForecast-item tempFeel-container'>
+							<p className='dayForecast-item__value'>{feels_like}</p>
+						</div>
+						<div className='dayForecast-item temp-container'>
+							<p className='dayForecast-item__value'>{temp}</p>
+						</div>
+						<div className='dayForecast-item wind-container'>
+							<p className='dayForecast-item__value'>{wind}</p>
+						</div>
 					</div>
 				);
 			})}

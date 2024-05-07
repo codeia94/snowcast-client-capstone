@@ -23,7 +23,6 @@ function MountainList() {
 			<div className='mountains-container'>
 				{mountains.map((mountain) => {
 					const mountainsImageUrl = `http://localhost:8080/images/${mountain.img}`;
-					// console.log(mountainsImageUrl);
 					return(
 						<Link
 							to={`/province/${province}/${mountain.id}`}

@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import './CountryPage.scss';
-import USA from '../../Assets/Images/usa-mountains.webp';
-import CA from '../../Assets/Images/ca-mountains.jpeg';
 
 function CountryPage() {
 

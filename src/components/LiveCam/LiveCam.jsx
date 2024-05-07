@@ -15,8 +15,6 @@ function LiveCam() {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/livecam/province/${province}`);
 				setLiveCam(response.data);
-				console.log(response.data); 
-				console.log(liveCam);
 			} catch (error) {
 				console.error('Error fetching live cam:', error);
 			}

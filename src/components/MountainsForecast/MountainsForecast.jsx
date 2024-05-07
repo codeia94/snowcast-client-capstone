@@ -14,7 +14,6 @@ function MountainsForecast() {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/mountain/province/${province}`);
 				setMountainForecast(response.data);
-				console.log(response.data);
 			} catch (error) {
 				console.error('Error fetching mountain data:', error);
 			}

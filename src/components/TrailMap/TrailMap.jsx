@@ -55,7 +55,7 @@ function TrailMap () {
 				})}
 				{selectedMapImage && (
           <div className="modal" onClick={() => setSelectedMapImage(null)}>
-            <img src={selectedMapImage} className="modal-image" />
+            <img src={selectedMapImage} alt='download-img' className="modal-image" />
           </div>
         )}
 			</div>
