@@ -15,26 +15,19 @@ function App() {
     <BrowserRouter>
 			<Header />
 			<Routes>
-
-				{/* Country page - homepage */}
+				
 				<Route path="/" element={<CountryPage />} />
 
-				{/* Province Page - perhaps a list of all provinces */}
 				<Route path="/province" element={<ProvincePage />} />
 
-				{/* List of ski mouintains within a chosen province */}
 				<Route path="/province/:province" element={<MountainsPage />} />
 
-				{/* Details of chosen mountain */}
 				<Route path="/province/:province/:id" element={<MountainDetailsPage />} />
 
-				{/* List of summarize forecast by province */}
 				<Route path="/province/:province/forecast" element={<ForecastPage />} />
 
-				{/* List of trail maps by province */}
 				<Route path="/province/:province/trailmap" element={<TrailMapPage />} />
 
-				{/* List of live feed cams by province*/}
 				<Route path="/province/:province/cams" element={<LiveCamPage />} />
 
 
