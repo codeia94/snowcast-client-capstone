@@ -14,31 +14,42 @@ function TrailMap () {
 		const fetchTrailMaps = async () => {
 			const response = await axios.get(`http://localhost:8080/api/trailmap/province/${province}`);
 			setTrailMaps(response.data);
-			// console.log(response.data);
 		};
 		fetchTrailMaps();
 	},[province]);
 
+	const downloadImage = async (url) => {
+		const response = await fetch(url);
+		const blob = await response.blob();
+		const urlBlob = window.URL.createObjectURL(blob);
+		const link = document.createElement('a');
+		link.href = urlBlob;
+		link.download = url.split('/').pop();
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+};
 
-// <a href="/images/myimage.jpg" download>Click to download</a>
+
 	return (
 		<div className='trailMap'>
 			<div className='trailMap-container'>
-				{/* <div className='trailMap-container__name'>
-					<h2>Trail Maps</h2>
-				</div> */}
 				{trailMaps.map((trailMap) => {
 					const trailMapImageUrl = `http://localhost:8080/trailmaps/${trailMap.trailmap}`;
 					return(
 						<div className='trailMap-card' key={trailMap.id}>
-							{/* <p className='trailMao-card__mountain'>{trailMap}</p> */}
 							<img 
 								src={trailMapImageUrl} 
 								alt='trail map'
 								className='trailMap-card__image' 
 								onClick={() => setSelectedMapImage(trailMapImageUrl)}
 							/>
-							<a href={trailMapImageUrl} download className='trailMap-download' >Click to download</a>
+							<a href="#" 
+								onClick={(e) => { e.preventDefault(); 
+									downloadImage(trailMapImageUrl); }} 
+									className='trailMap-download'>
+										Click to download
+							</a>						
 						</div>
 					);
 				})}
