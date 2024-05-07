@@ -1,6 +1,5 @@
 @use '../../styles/partials/fontcolor' as *;
 @use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/typography' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/global.scss' as *;
 
@@ -20,5 +19,37 @@
 		&:nth-child(even) {
 			background-color: white;
 		}
+
+		&__summary {
+			text-align: center;
+		}
+		&__description {
+			text-align: center;
+			&-icon {
+				width: 70px;
+				height: 70px;
+				&:hover {
+					animation: move 2s ease-in-out infinite;
+				}
+			}
+			&-description {
+				font-size: 0.8rem;
+				margin-top: -1rem;
+				margin-bottom: 0.8rem;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+@keyframes move {
+	0% {
+			transform: translateX(-10px);
+	}
+	50% {
+			transform: translateX(10px);
+	}
+	100% {
+			transform: translateX(-10px);
 	}
 }

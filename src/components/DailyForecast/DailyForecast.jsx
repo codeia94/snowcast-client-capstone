@@ -14,11 +14,7 @@ function DailyForecast () {
 		const fetchDailyForecast = async () => {
 			try {
 				const response = await axios.get(`http://localhost:8080/api/mountain/${id}`);
-				//Get daily forecast
-				// console.log(response.data.daily);
 				setDailyForecast(response.data.daily);
-				//Get daily weather description
-				// console.log(response.data.daily[0].weather);
 				setDescription(response.data.daily[0].weather);
 			} catch (error) {
 				console.error('Error fetching daily data:', error);
@@ -45,14 +41,11 @@ function DailyForecast () {
 						<p className='dailyForecast-info__summary'>{summary}</p>
 						<div className='dailyForecast-info__description'>
 							<img src={iconUrl} alt={description} className='dailyForecast-info__description-icon'/>
-							<p>{description}</p>
-							{/* TODO description not shown in mobile */}
+							<p className='dailyForecast-info__description-description' >{description}</p>
 						</div>
 						<div className='dailyForecast-info__temp'>
 							<p>{minTemp} °C / {maxTemp} °C</p>
 						</div>
-					
-						{/* </div> */}
 					</div>
 				);
 			})}
