@@ -13,7 +13,7 @@ function MountainListLabel() {
 	useEffect(() => {
 		const fetchMountainLabel = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/province/${province}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/province/${province}`);
 				setShowMountainList(response.data);
 				setIsLoading(false);
 			} catch (error) {

@@ -12,7 +12,7 @@ function TrailMap () {
 
 	useEffect(() => {
 		const fetchTrailMaps = async () => {
-			const response = await axios.get(`http://localhost:8080/api/trailmap/province/${province}`);
+			const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/trailmap/province/${province}`);
 			setTrailMaps(response.data);
 		};
 		fetchTrailMaps();
@@ -35,7 +35,7 @@ function TrailMap () {
 		<div className='trailMap'>
 			<div className='trailMap-container'>
 				{trailMaps.map((trailMap) => {
-					const trailMapImageUrl = `http://localhost:8080/trailmaps/${trailMap.trailmap}`;
+					const trailMapImageUrl = `https://snowcast-server-df25b44e24b0.herokuapp.com/trailmaps/${trailMap.trailmap}`;
 					return(
 						<div className='trailMap-card' key={trailMap.id}>
 							<img 

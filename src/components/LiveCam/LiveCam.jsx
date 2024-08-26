@@ -13,7 +13,7 @@ function LiveCam() {
 	useEffect(() => {
 		const fetchLiveCam = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/livecam/province/${province}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/livecam/province/${province}`);
 				setLiveCam(response.data);
 			} catch (error) {
 				console.error('Error fetching live cam:', error);

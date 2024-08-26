@@ -12,7 +12,7 @@ function MountainsForecast() {
 	useEffect(() => {
 		const fetchMountainForecast = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/mountain/province/${province}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/province/${province}`);
 				setMountainForecast(response.data);
 			} catch (error) {
 				console.error('Error fetching mountain data:', error);

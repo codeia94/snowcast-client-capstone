@@ -12,7 +12,7 @@ function MountainList() {
 
 	useEffect(() => {
 		const fetchMountains = async () => {
-			const response = await axios.get(`http://localhost:8080/api/province/${province}`);
+			const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/province/${province}`);
 			setMountains(response.data);
 		};
 		fetchMountains();
@@ -22,7 +22,7 @@ function MountainList() {
 		<div className='mountains'>
 			<div className='mountains-container'>
 				{mountains.map((mountain) => {
-					const mountainsImageUrl = `http://localhost:8080/images/${mountain.img}`;
+					const mountainsImageUrl = `https://snowcast-server-df25b44e24b0.herokuapp.com/images/${mountain.img}`;
 					return(
 						<Link
 							to={`/province/${province}/${mountain.id}`}

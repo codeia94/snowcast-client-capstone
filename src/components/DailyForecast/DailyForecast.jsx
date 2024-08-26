@@ -13,7 +13,7 @@ function DailyForecast () {
 	useEffect(() => {
 		const fetchDailyForecast = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/mountain/${id}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/${id}`);
 				setDailyForecast(response.data.daily);
 				setDescription(response.data.daily[0].weather);
 			} catch (error) {
@@ -34,7 +34,7 @@ function DailyForecast () {
 			const maxTemp = forecast.temp.max;
 			const weatherIcon = forecast.weather[0].icon;
 			const description = forecast.weather[0].description;
-			const iconUrl = `http://localhost:8080/icons/${weatherIcon}.png`
+			const iconUrl = `https://snowcast-server-df25b44e24b0.herokuapp.com/icons/${weatherIcon}.png`
 				return (
 					<div key={index} className='dailyForecast-info'>
 						<h4 className='dailyForecast-info__date'>{setDay}</h4>

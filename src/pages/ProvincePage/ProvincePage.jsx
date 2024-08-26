@@ -11,7 +11,7 @@ function ProvincePage() {
 
 	useEffect(() => {
 		const fetchProvinces = async () => {
-			const response = await axios.get('http://localhost:8080/api/province');
+			const response = await axios.get('https://snowcast-server-df25b44e24b0.herokuapp.com/api/province');
 			setProvinces(response.data);
 		};
 	fetchProvinces();	
@@ -21,7 +21,7 @@ function ProvincePage() {
 		<div className='province'>
 			<div className='province-container'>
 			{provinces.map((province) => {
-				const provinceImageUrl = `http://localhost:8080/images/${province.province}.jpeg`
+				const provinceImageUrl = `https://snowcast-server-df25b44e24b0.herokuapp.com/images/${province.province}.jpeg`
 
 				return (
 					<Link 

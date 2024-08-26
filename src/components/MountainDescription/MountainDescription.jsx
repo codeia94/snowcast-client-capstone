@@ -13,7 +13,7 @@ function MountainDescription() {
 	useEffect(() => {
 		const fetchMountainDescription = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/mountain/mountain/${id}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/mountain/${id}`);
 				setMountainDescription(response.data);
 			} catch (error) {
 				console.error('Error fetching mountain description:', error);
@@ -25,7 +25,7 @@ function MountainDescription() {
 	useEffect(() => {
 		const fetchLiveCam = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/livecam/${id}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/livecam/${id}`);
 				setLiveCam(response.data[0]);
 				console.log(response.data[0]);
 			} catch (error) {
@@ -42,7 +42,7 @@ function MountainDescription() {
 		<div className='mountainDescription'>
 			<div className='mountainDescription-image'>
 				<img 
-					src={`http://localhost:8080/images/${img}`} 
+					src={`https://snowcast-server-df25b44e24b0.herokuapp.com/images/${img}`} 
 					className='mountainDescription-image__img' 
 					alt={name}
 				/>
