@@ -13,6 +13,7 @@ function ProvincePage() {
 		const fetchProvinces = async () => {
 			const response = await axios.get('https://snowcast-server-df25b44e24b0.herokuapp.com/api/province');
 			setProvinces(response.data);
+			console.log(response.data);
 		};
 	fetchProvinces();	
 	}, []);
