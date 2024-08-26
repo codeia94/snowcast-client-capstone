@@ -12,7 +12,7 @@ import ForecastPage from './pages/ForecastPage/ForecastPage';
 
 function App() {
   return (
-    <BrowserRouter basename='/snowcast-client-capstone'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Header />
 			<Routes>
 				
