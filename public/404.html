@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+  </head>
+  <body>
+    <!-- ... -->
+    <script>
+      // Check if the URL ends with a file extension
+      if (/\/[a-z0-9]+\.[a-z]+$/i.test(location.pathname)) {
+        // If it does, assume the file doesn't exist and show a standard 404 page message
+        document.body.innerHTML = '404: Not Found';
+      } else {
+        // If it doesn't, assume this is a route in the SPA
+        // Rewrite the URL to the root of the domain
+        // This is necessary because relative paths in the HTML file are relative to the current URL
+        history.replaceState(null, null, location.origin + '/snowcast-client-capstone' + location.hash);
+      }
+    </script>
+  </body>
+</html>
