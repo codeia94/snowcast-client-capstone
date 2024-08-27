@@ -12,7 +12,7 @@ function DayForecast() {
 	useEffect(() => {
 		const fetchDayForecast = async () => {
 			try {
-				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/${id}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/mountain/${id}`);
 				setHourlyForecast(response.data.hourly);
 			} catch (error) {
 				console.error('Error fetching hourly data:', error);
