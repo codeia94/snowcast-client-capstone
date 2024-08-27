@@ -13,7 +13,7 @@ function DailyForecast () {
 	useEffect(() => {
 		const fetchDailyForecast = async () => {
 			try {
-				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/${id}`);
+				const response = await axios.get(`https://snowcast-server-df25b44e24b0.herokuapp.com/api/mountain/mountain/${id}`);
 				setDailyForecast(response.data.daily);
 				setDescription(response.data.daily[0].weather);
 			} catch (error) {
