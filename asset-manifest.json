@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/snowcast-client-capstone/static/css/main.a26bc7c3.css",
-    "main.js": "/snowcast-client-capstone/static/js/main.11006c75.js",
+    "main.js": "/snowcast-client-capstone/static/js/main.b09a654c.js",
     "static/js/453.9abd3d86.chunk.js": "/snowcast-client-capstone/static/js/453.9abd3d86.chunk.js",
     "static/media/usa-mountains.webp": "/snowcast-client-capstone/static/media/usa-mountains.13214689a5b76a5e6ebf.webp",
     "static/media/ca-mountains.jpeg": "/snowcast-client-capstone/static/media/ca-mountains.d1c323d88b01ea4fdbb1.jpeg",
     "static/media/snowflake-svgrepo-com.svg": "/snowcast-client-capstone/static/media/snowflake-svgrepo-com.f93a7f3731d8e0fab07bf2ede9829b90.svg",
     "index.html": "/snowcast-client-capstone/index.html",
     "main.a26bc7c3.css.map": "/snowcast-client-capstone/static/css/main.a26bc7c3.css.map",
-    "main.11006c75.js.map": "/snowcast-client-capstone/static/js/main.11006c75.js.map",
+    "main.b09a654c.js.map": "/snowcast-client-capstone/static/js/main.b09a654c.js.map",
     "453.9abd3d86.chunk.js.map": "/snowcast-client-capstone/static/js/453.9abd3d86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a26bc7c3.css",
-    "static/js/main.11006c75.js"
+    "static/js/main.b09a654c.js"
   ]
 }
